@@ -1,48 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<persistence version="2.0"-->
-             <!--xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-             <!--xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">-->
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+<!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">-->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
     <persistence-unit name="bank-app" transaction-type="JTA">
-        <!-- Persistence provider -->
         <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
-        <!--<non-jta-data-source>java:comp/env/jdbc/BankApp</non-jta-data-source>-->
-        <!-- Entity classes -->
-        <jta-data-source>jdbc/MysqlDS</jta-data-source>
-        <class>com.pai2.bank.app.model.User</class>
+        <!--<jta-data-source>java:openejb/Resource/BankApp</jta-data-source>-->
+        <class>com.pai2.bank.app.model.RoleEntity</class>
+        <class>com.pai2.bank.app.model.UserEntity</class>
         <properties>
-            <!-- The JDBC driver of your database -->
             <!--<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp"/>-->
-
-            <!--<property name="hibernate.connection.username" value="root" />-->
-
-            <!--<property name="hibernate.connection.password" value="admin" />-->
-
-            <!--<property name="hibernate.hbm2ddl.auto" value="update" />-->
-
-            <!--<property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/BankApp"/>-->
-
-
-
-
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!--<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>-->
+            <!--<property name="hibernate.connection.username" value="root"/>-->
+            <!--<property name="hibernate.connection.password" value="admin"/>-->
+            <!--<property name="hibernate.archive.autodetection" value="class"/>-->
+            <!--<property name="hibernate.show_sql" value="true"/>-->
+            <!--<property name="hibernate.format_sql" value="true"/>-->
+            <!--<property name="hbm2ddl.auto" value="update"/>-->
+            <!--<property name="hibernate.transaction.manager_lookup_class" value="com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup"/>-->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <!--<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>-->
             <!--<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>-->
             <!-- The JDBC URL to the database instance -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bankapp"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
             <!-- The database username -->
             <property name="javax.persistence.jdbc.user" value="root" />
             <!-- The database password -->
             <property name="javax.persistence.jdbc.password" value="admin" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
+            <property name="javax.persistence.jdbc.useSSL" value="false"/>
             <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
 
 
             <property name="hibernate.archive.autodetection" value="class" />
             <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />-->
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC" />
             <property name="hibernate.connection.username" value="root" />
             <property name="hibernate.connection.password" value="admin" />
             <!-- <property name="hibernate.show_sql" value="true"/> -->
@@ -50,5 +46,4 @@
 
         </properties>
     </persistence-unit>
-
 </persistence>

@@ -1,7 +1,7 @@
 package com.pai2.bank.app.dao.implementation;
 
 import com.pai2.bank.app.dao.UserDAO;
-import com.pai2.bank.app.model.User;
+import com.pai2.bank.app.model.UserEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.Query;
@@ -10,12 +10,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Stateless(name = "UserDaoImpl", mappedName = "AccountsDaoImpl")
-public class UserDaoImpl extends DaoImpl<Integer, User> implements UserDAO {
+public class UserDaoImpl extends DaoImpl<Integer, UserEntity> implements UserDAO {
 
     @Override
-    public Set<User> getUserList(){
-//        Query query = getEntityManager().createQuery("FROM " +entityClass.getCanonicalName()+ " e");
-//        return new HashSet<User>(query.getResultList());
-        return null;
+    public Set<UserEntity> getUserList(){
+        Query query = getEntityManager().createQuery("SELECT e FROM UserEntity e ");
+        return new HashSet<UserEntity>(query.getResultList());
+
     }
 }

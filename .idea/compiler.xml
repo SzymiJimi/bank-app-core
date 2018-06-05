@@ -23,7 +23,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bank-app-core" target="8" />
+      <module name="bank-app-core" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>
