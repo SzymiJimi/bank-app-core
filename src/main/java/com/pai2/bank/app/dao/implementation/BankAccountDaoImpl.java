@@ -14,7 +14,7 @@ public class BankAccountDaoImpl  extends DaoImpl<Integer, Bankaccount> implement
 
     @Override
     public List<Bankaccount> findBankAccountsByClientId(Integer clientId) {
-        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccount b WHERE b.idClient.idClient="+ clientId);
+        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccount b WHERE b.idClient.="+ clientId);
         System.out.println("Wyniki pobierania kont: "+query.getResultList());
         return new ArrayList<Bankaccount>(query.getResultList());
     }

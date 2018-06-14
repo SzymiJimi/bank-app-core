@@ -1,13 +1,11 @@
 package com.pai2.bank.app.controller;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.pai2.bank.app.dao.UserDAO;
 import com.pai2.bank.app.model.Credentials;
 import com.pai2.bank.app.model.JsonMessage;
 import com.pai2.bank.app.model.User;
 import com.pai2.bank.app.service.AuthenticationService;
-
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -40,7 +38,7 @@ public class LoginController {
             return Response.ok().entity(loggedUser).build();
         }else
         {
-            System.out.println("User not foud");
+            System.out.println("User not found");
             return Response.status(403).build();
         }
 

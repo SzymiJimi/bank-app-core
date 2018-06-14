@@ -32,27 +32,28 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Manager.findAll", query = "SELECT m FROM Manager m")
     , @NamedQuery(name = "Manager.findByIdManager", query = "SELECT m FROM Manager m WHERE m.idManager = :idManager")
-        , @NamedQuery(name = "Manager.findByIdUser", query = "SELECT m FROM Manager m WHERE m.idUser.idUser = :idUser")
+    , @NamedQuery(name = "Manager.findByIdUser", query = "SELECT m FROM Manager m WHERE m.idUser.idUser = :idUser")
     , @NamedQuery(name = "Manager.findBySalary", query = "SELECT m FROM Manager m WHERE m.salary = :salary")})
 public class Manager implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @Basic(optional = false)
     @NotNull
     @Column(name = "idManager")
     private Integer idManager;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "salary")
     private BigDecimal salary;
-//    @OneToMany(mappedBy = "idManager")
-//    private List<Creditoffer> creditofferList;
-//    @OneToMany(mappedBy = "idManager")
-//    private List<Investmentoffer> investmentofferList;
+    @OneToMany(mappedBy = "idManager")
+    private transient List<Creditoffer> creditofferList;
+    @OneToMany(mappedBy = "idManager")
+    private transient List<Investmentoffer> investmentofferList;
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     @ManyToOne(optional = false)
     private User idUser;
-//    @OneToMany(mappedBy = "idManager")
-//    private List<Bankaccountoffer> bankaccountofferList;
+    @OneToMany(mappedBy = "idManager")
+    private transient List<Bankaccountoffer> bankaccountofferList;
 
     public Manager() {
     }
@@ -77,23 +78,23 @@ public class Manager implements Serializable {
         this.salary = salary;
     }
 
-//    @XmlTransient
-//    public List<Creditoffer> getCreditofferList() {
-//        return creditofferList;
-//    }
-//
-//    public void setCreditofferList(List<Creditoffer> creditofferList) {
-//        this.creditofferList = creditofferList;
-//    }
-//
-//    @XmlTransient
-//    public List<Investmentoffer> getInvestmentofferList() {
-//        return investmentofferList;
-//    }
-//
-//    public void setInvestmentofferList(List<Investmentoffer> investmentofferList) {
-//        this.investmentofferList = investmentofferList;
-//    }
+    @XmlTransient
+    public List<Creditoffer> getCreditofferList() {
+        return creditofferList;
+    }
+
+    public void setCreditofferList(List<Creditoffer> creditofferList) {
+        this.creditofferList = creditofferList;
+    }
+
+    @XmlTransient
+    public List<Investmentoffer> getInvestmentofferList() {
+        return investmentofferList;
+    }
+
+    public void setInvestmentofferList(List<Investmentoffer> investmentofferList) {
+        this.investmentofferList = investmentofferList;
+    }
 
     public User getIdUser() {
         return idUser;
@@ -103,14 +104,14 @@ public class Manager implements Serializable {
         this.idUser = idUser;
     }
 
-//    @XmlTransient
-//    public List<Bankaccountoffer> getBankaccountofferList() {
-//        return bankaccountofferList;
-//    }
-//
-//    public void setBankaccountofferList(List<Bankaccountoffer> bankaccountofferList) {
-//        this.bankaccountofferList = bankaccountofferList;
-//    }
+    @XmlTransient
+    public List<Bankaccountoffer> getBankaccountofferList() {
+        return bankaccountofferList;
+    }
+
+    public void setBankaccountofferList(List<Bankaccountoffer> bankaccountofferList) {
+        this.bankaccountofferList = bankaccountofferList;
+    }
 
     @Override
     public int hashCode() {

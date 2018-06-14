@@ -17,7 +17,7 @@
 
         driverClassName = com.mysql.cj.jdbc.Driver
         url = jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
-        username = root
-        password = admin
+        username = wojtek
+        password = wojtek
     </Resource>
 </resources>

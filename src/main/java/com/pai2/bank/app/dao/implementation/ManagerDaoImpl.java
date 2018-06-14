@@ -16,7 +16,7 @@ public class ManagerDaoImpl extends DaoImpl<Integer,Manager> implements ManagerD
     public Manager findManagerWithUserId(Integer userId) {
 
         try{
-            Query query =getEntityManager().createNamedQuery("Manager.findByIdUser");
+                Query query =getEntityManager().createNamedQuery("Manager.findByIdUser");
             query.setParameter("idUser", userId);
             return (Manager) query.getSingleResult();
         }catch(Exception e){

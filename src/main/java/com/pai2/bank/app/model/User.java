@@ -5,36 +5,45 @@
  */
 package com.pai2.bank.app.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Szymon Jarząbek
+ * @author Odbiorca
  */
 @Entity
 @Table(name = "user")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
     , @NamedQuery(name = "User.findByIdUser", query = "SELECT u FROM User u WHERE u.idUser = :idUser")
     , @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username")
     , @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password")
     , @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email")
-    , @NamedQuery(name = "User.findByRegisterDate", query = "SELECT u FROM User u WHERE u.registerDate = :registerDate")
-    , @NamedQuery(name = "User.findByIdRole", query = "SELECT u FROM User u WHERE u.idRole = :idRole")})
+    , @NamedQuery(name = "User.findByRegisterDate", query = "SELECT u FROM User u WHERE u.registerDate = :registerDate")})
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "idUser")
     private Integer idUser;
     @Size(max = 45)
@@ -47,21 +56,17 @@ public class User implements Serializable {
     @Size(max = 60)
     @Column(name = "email")
     private String email;
+    @Size(max = 20)
     @Column(name = "registerDate")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date registerDate;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "idRole")
-    private int idRole;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-//    private List<Client> clientList;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-//    private List<Manager> managerList;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-//    private List<Loginhistory> loginhistoryList;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-//    private List<Consultant> consultantList;
+    private String registerDate;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
+    private transient List<Client> clientList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
+    private transient List<Manager> managerList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
+    private transient List<Loginhistory> loginhistoryList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
+    private transient List<Consultant> consultantList;
     @JoinColumn(name = "idPerson", referencedColumnName = "idPerson")
     @ManyToOne(optional = false)
     private Person idPerson;
@@ -71,11 +76,6 @@ public class User implements Serializable {
 
     public User(Integer idUser) {
         this.idUser = idUser;
-    }
-
-    public User(Integer idUser, int idRole) {
-        this.idUser = idUser;
-        this.idRole = idRole;
     }
 
     public Integer getIdUser() {
@@ -110,56 +110,49 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Date getRegisterDate() {
+    public String getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(Date registerDate) {
+    public void setRegisterDate(String registerDate) {
         this.registerDate = registerDate;
     }
 
-    public int getIdRole() {
-        return idRole;
+    @XmlTransient
+    public List<Client> getClientList() {
+        return clientList;
     }
 
-    public void setIdRole(int idRole) {
-        this.idRole = idRole;
+    public void setClientList(List<Client> clientList) {
+        this.clientList = clientList;
     }
 
-//    public List<Client> getClientList() {
-//        return clientList;
-//    }
-//
-//    public void setClientList(List<Client> clientList) {
-//        this.clientList = clientList;
-//    }
+    @XmlTransient
+    public List<Manager> getManagerList() {
+        return managerList;
+    }
 
+    public void setManagerList(List<Manager> managerList) {
+        this.managerList = managerList;
+    }
 
-//    public List<Manager> getManagerList() {
-//        return managerList;
-//    }
-//
-//    public void setManagerList(List<Manager> managerList) {
-//        this.managerList = managerList;
-//    }
+    @XmlTransient
+    public List<Loginhistory> getLoginhistoryList() {
+        return loginhistoryList;
+    }
 
-//    @XmlTransient
-//    public List<Loginhistory> getLoginhistoryList() {
-//        return loginhistoryList;
-//    }
-//
-//    public void setLoginhistoryList(List<Loginhistory> loginhistoryList) {
-//        this.loginhistoryList = loginhistoryList;
-//    }
-//
-//    @XmlTransient
-//    public List<Consultant> getConsultantList() {
-//        return consultantList;
-//    }
-//
-//    public void setConsultantList(List<Consultant> consultantList) {
-//        this.consultantList = consultantList;
-//    }
+    public void setLoginhistoryList(List<Loginhistory> loginhistoryList) {
+        this.loginhistoryList = loginhistoryList;
+    }
+
+    @XmlTransient
+    public List<Consultant> getConsultantList() {
+        return consultantList;
+    }
+
+    public void setConsultantList(List<Consultant> consultantList) {
+        this.consultantList = consultantList;
+    }
 
     public Person getIdPerson() {
         return idPerson;
