@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Resource id="jdbc/bankapp" type="javax.sql.DataSource">
+        JtaManaged = true
+
+        initialSize= 34
+        maxActive= 377
+        maxIdle= 233
+        minIdle= 89
+        timeBetweenEvictionRunsMillis= 34000
+        minEvictableIdleTimeMillis= 55000
+
+        validationQuery = SELECT 1
+        initialSize = 2
+        removeAbandoned = true
+        removeAbandonedTimeout = 120
+
+        driverClassName = com.mysql.cj.jdbc.Driver
+        url = jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
+        username = root
+        password = laczki3
+    </Resource>
+</resources>
