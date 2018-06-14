@@ -7,53 +7,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30e31eed-2456-496b-83cd-b55a29721876" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_10_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_hibernate4_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b42.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/BankAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/CreditCardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/SecureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/BankAccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ClientDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ConsultantDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/CreditCardDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ManagerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/BankAccountDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ClientDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ConsultantDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/CreditCardDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ManagerDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/PersonDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Bankaccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Consultant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Creditcard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/JsonMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8e5e0bb8-8d2b-4a56-ad50-efc1aa91865c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8e5e0bb8-8d2b-4a56-ad50-efc1aa91865c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a494e45b-551a-463a-ab13-57512da3ce99.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a494e45b-551a-463a-ab13-57512da3ce99.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb6c3abf-b64f-435e-84dd-7062fa2a3c86.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb6c3abf-b64f-435e-84dd-7062fa2a3c86.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank-app-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank-app-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/BankAppCoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/BankAppCoreApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/config/CorsConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/Dao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/implementation/DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/implementation/DaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/implementation/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/dao/implementation/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/Credentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/RoleEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_app_core/WEB-INF/classes/com/pai2/bank/app/model/UserEntity.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Credentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/RoleEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/UserEntity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/BankAppCoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/BankAppCoreApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/config/CorsConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/Dao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/implementation/DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/implementation/DaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/implementation/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/dao/implementation/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/Credentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/RoleEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pai2/bank/app/model/UserEntity.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,43 +107,21 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bank-app/OpenJPA" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <file leaf-file-name="CreditCardController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/CreditCardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/Dao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="272">
+              <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,20 +129,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/UserDAO.java">
+      <file leaf-file-name="BankAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/BankAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="151">
+              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/DaoImpl.java">
+      <file leaf-file-name="BankAccountDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/BankAccountDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="270">
+              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="31" selection-start-line="31" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/PersonDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,17 +180,56 @@
       <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            <state relative-caret-position="170">
+              <caret line="17" column="56" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
+      <file leaf-file-name="Creditcard.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Creditcard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="140">
+              <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditCardDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/CreditCardDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankAccountDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/BankAccountDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="24" selection-start-line="24" selection-end-line="25" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,8 +242,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="cdi.beans_1_1" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -175,6 +253,8 @@
     <findStrings>
       <find>1527</find>
       <find>Inventory</find>
+      <find>login</find>
+      <find>OneToMany</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,28 +271,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BankAppCoreApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/JWTCredential.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/JWTRememberMeIdentityStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/rest/ApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/AuthorizationIdentityStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/TokenProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/security/JWTAuthenticationMechanism.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/rest/SampleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/SecuredResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/SecureController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Credentials.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/security/SecurityFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/RoleDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/RoleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/PersonDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/META-INF/persistance.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/DaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/PersonDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Credit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/AUTH.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/enum/Auth.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Auth.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/service/AuthenticationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ClientDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ManagerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ManagerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ConsultantDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ClientDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ConsultantDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Consultant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/JacksonHibernate5ModuleConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Bankaccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/CreditCardDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/BankAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/CreditCardDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/JsonMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/service/AuthenticationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/BankAccountDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/BankAccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/CreditCardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Creditcard.java" />
       </list>
     </option>
   </component>
@@ -230,10 +339,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1701" />
-    <option name="y" value="95" />
-    <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="x" value="-82" />
+    <option name="y" value="15" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,9 +350,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +484,7 @@
               <item name="pai2" type="462c0819:PsiDirectoryNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bank-app-core" type="b2602c69:ProjectViewProjectNode" />
@@ -408,34 +514,50 @@
             </path>
             <path>
               <item name="bank-app-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank-app-core" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bank-app-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="JPA.DatabaseSchemaImportDialog" value="8e5e0bb8-8d2b-4a56-ad50-efc1aa91865c" />
     <property name="SearchEverywhereHistoryKey" value="tomee&#9;FILE&#9;jar://F:/apache-tomee-webprofile-7.0.2/lib/javaee-api-7.0-1.jar!/META-INF/maven/org.apache.tomee&#10;data&#9;FILE&#9;file://H:/6 semestr/Programowanie aplikacji internetowych 2/bank-app-core/.idea/dataSources.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="H:/Angular5 - kurs/my-dream-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Inżynieria systemów informacyjnych/Lab5JSP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\src\main\java\com\pai2\bank\app\model" />
       <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\src\main\java" />
       <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\src\main\java\META-INF" />
       <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\web\WEB-INF" />
       <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\src\main\resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.pai2.bank.app.model" />
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\6 semestr\Programowanie aplikacji internetowych 2\bank-app-core\src\main\resources" />
@@ -729,90 +851,98 @@
       <workItem from="1528051065626" duration="8763000" />
       <workItem from="1528127191055" duration="6128000" />
       <workItem from="1528135339368" duration="9000" />
-      <workItem from="1528232114087" duration="1175000" />
+      <workItem from="1528232114087" duration="8804000" />
+      <workItem from="1528281523399" duration="15722000" />
+      <workItem from="1528833566607" duration="5209000" />
+      <workItem from="1528888435031" duration="8019000" />
+      <workItem from="1528905257967" duration="14336000" />
+      <workItem from="1528925816728" duration="4205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51736000" />
+    <option name="totallyTimeSpent" value="106856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="12" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18928571" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.16597077" />
       <window_info anchor="right" id="JSF" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32943678" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.4590861" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32930845" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45883644" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.49946865" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Persistence" order="3" sideWeight="0.5010941" side_tool="true" weight="0.14635417" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.23869048" />
+      <window_info id="Persistence" order="3" sideWeight="0.3927959" side_tool="true" weight="0.20041753" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.60720414" visible="true" weight="0.2" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.3296875" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32943678" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="JPA Console" order="10" weight="0.32930845" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32943678" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
     </layout>
     <layout-to-restore>
-      <window_info id="Persistence" order="7" sideWeight="0.5010941" side_tool="true" visible="true" weight="0.14635417" />
-      <window_info anchor="bottom" id="Application Servers" order="8" />
+      <window_info id="Persistence" order="7" sideWeight="0.3927959" side_tool="true" weight="0.20041753" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32943678" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.5143464" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37311828" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="JSF" order="11" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32943678" />
-      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.4591398" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32930845" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.14635417" />
-      <window_info anchor="right" id="Database" order="6" weight="0.15833333" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.60720414" visible="true" weight="0.20041753" />
+      <window_info anchor="right" id="Database" order="6" weight="0.16597077" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="CDI" order="9" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="JPA Console" order="15" weight="0.32930845" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
       <window_info anchor="right" id="Bean Validation" order="10" weight="0.3296875" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -831,268 +961,353 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/SecureController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="272">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistance.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank-app-core.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" selection-start-line="6" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Role.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistance.xml" />
-    <entry file="file://$PROJECT_DIR$/bank-app-core.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" selection-start-line="6" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Role.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank-app-core.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml" />
-    <entry file="das://857c2955-047d-4cc7-8593-052a91785528/schema/bankapp/table/user" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/UserEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Bankaccountoffer.java" />
+    <entry file="uml://Persistence/JavaeeElement:/75ffa793/bank-app/bank-app-core/jpa/JPA/PersistenceModel">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
-          <caret selection-end-line="9" />
+          <ID>Persistence</ID>
+          <OriginalElement>JavaeeElement:/75ffa793/bank-app/bank-app-core/jpa/JPA/PersistenceModel</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="599.0" y="406.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Embeddables</Category>
+            <Category>Superclasses</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/repository/UserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.3.10.Final/hibernate-entitymanager-4.3.10.Final.jar!/org/hibernate/jpa/internal/EntityManagerFactoryImpl.class" />
-    <entry file="jar://F:/apache-tomee-webprofile-7.0.2/lib/javaee-api-7.0-1.jar!/javax/persistence/EntityManagerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistance.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Loginhstory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Role.java" />
-    <entry file="file://F:/Java/jdk1.8.0_161/lib/missioncontrol/artifacts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="1998" column="46" selection-start-line="1998" selection-start-column="46" selection-end-line="1998" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/BankAppCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/ClientscreditPK.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Recurringbanktransfers.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/ClientsinvestmentPK.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/RoleDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/RoleDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Clientscredit.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Credit.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/ejb/UserEJB.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/enum/Auth.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Auth.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/service/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/PersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/DaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="178">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/CorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Credentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ManagerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ClientDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ConsultantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ConsultantDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Consultant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="93" selection-start-line="93" selection-start-column="2" selection-end-line="100" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/config/JacksonHibernate5ModuleConfig.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="137" selection-start-line="137" selection-start-column="2" selection-end-line="143" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+        <state relative-caret-position="289">
+          <caret line="97" column="7" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Bankaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1738">
+          <caret line="184" selection-start-line="184" selection-start-column="2" selection-end-line="191" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/ClientDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/ManagerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/CreditCardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/service/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="47" column="78" lean-forward="true" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/JsonMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="24" selection-start-line="24" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/PersonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/CreditCardDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/BankAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="56" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/dao/implementation/BankAccountDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="31" selection-start-line="31" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/BankAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/controller/CreditCardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pai2/bank/app/model/Creditcard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="59" column="19" lean-forward="true" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,7 +1365,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate|bank-app-core</last-edited>
+          <last-edited>bank-app-core</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
