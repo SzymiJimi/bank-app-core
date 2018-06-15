@@ -21,13 +21,14 @@ public class UserDaoImpl extends DaoImpl<Integer, User> implements UserDAO {
 
     @Override
     public User findLoggingUser(Credentials credentials){
-        try{
+//        try{
             Query query =getEntityManager().createQuery("SELECT e FROM User e " +
                     "WHERE e.username='"+ credentials.getUsername()+"' AND e.password='"+ credentials.getPassword()+"'");
             return (User)query.getSingleResult();
-        }catch(Exception e){
-            return null;
-        }
+//        }catch(Exception e){
+//            System.out.println("Nieudane pobranie: "+e.toString());
+//            return null;
+//        }
 
 
     }

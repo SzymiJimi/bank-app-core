@@ -5,11 +5,6 @@
  */
 package com.pai2.bank.app.model;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
@@ -35,6 +30,7 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "person")
+@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p")
     , @NamedQuery(name = "Person.findByIdPerson", query = "SELECT p FROM Person p WHERE p.idPerson = :idPerson")
@@ -81,14 +77,15 @@ public class Person implements Serializable {
     @Size(max = 45)
     @Column(name = "mothersMaidenName")
     private String mothersMaidenName;
-//    @JoinColumn(name = "idAddress", referencedColumnName = "idAdress")
-//    @ManyToOne
-//    private Address idAddress;
-//    @JoinColumn(name = "idAddressForCorrespondence", referencedColumnName = "idAdress")
-//    @ManyToOne
-//    private Address idAddressForCorrespondence;
+    @JoinColumn(name = "idAddress", referencedColumnName = "idAdress")
+    @ManyToOne
+    private Address idAddress;
+    @JoinColumn(name = "idAddressForCorrespondence", referencedColumnName = "idAdress")
+    @ManyToOne
+    private Address idAddressForCorrespondence;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPerson")
     private transient List<User> userList;
+
     public Person() {
     }
 
@@ -176,22 +173,30 @@ public class Person implements Serializable {
         this.mothersMaidenName = mothersMaidenName;
     }
 
-//    public Address getIdAddress() {
-//        return idAddress;
-//    }
-//
-//    public void setIdAddress(Address idAddress) {
-//        this.idAddress = idAddress;
-//    }
-//
-//    public Address getIdAddressForCorrespondence() {
-//        return idAddressForCorrespondence;
-//    }
-//
-//    public void setIdAddressForCorrespondence(Address idAddressForCorrespondence) {
-//        this.idAddressForCorrespondence = idAddressForCorrespondence;
-//    }
+    public Address getIdAddress() {
+        return idAddress;
+    }
 
+    public void setIdAddress(Address idAddress) {
+        this.idAddress = idAddress;
+    }
+
+    public Address getIdAddressForCorrespondence() {
+        return idAddressForCorrespondence;
+    }
+
+    public void setIdAddressForCorrespondence(Address idAddressForCorrespondence) {
+        this.idAddressForCorrespondence = idAddressForCorrespondence;
+    }
+
+    @XmlTransient
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
 
     @Override
     public int hashCode() {

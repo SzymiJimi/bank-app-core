@@ -2,15 +2,11 @@ package com.pai2.bank.app.dao.implementation;
 
 
 import com.pai2.bank.app.dao.CreditCardDao;
-import com.pai2.bank.app.dao.UserDAO;
 import com.pai2.bank.app.model.Creditcard;
-import com.pai2.bank.app.model.User;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.Query;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 @Stateless(name = "CreditCardDaoImpl", mappedName = "CreditCardDaoImpl")

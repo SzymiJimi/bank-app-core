@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Consultant.findAll", query = "SELECT c FROM Consultant c")
-    , @NamedQuery(name = "Consultant.findByIdConsultant", query = "SELECT c FROM Consultant c WHERE c.idConsultant = :idConsultant")
         , @NamedQuery(name = "Consultant.findByIdUser", query = "SELECT c FROM Consultant c WHERE c.idUser.idUser = :idUser")
+    , @NamedQuery(name = "Consultant.findByIdConsultant", query = "SELECT c FROM Consultant c WHERE c.idConsultant = :idConsultant")
     , @NamedQuery(name = "Consultant.findBySalary", query = "SELECT c FROM Consultant c WHERE c.salary = :salary")
     , @NamedQuery(name = "Consultant.findByPosition", query = "SELECT c FROM Consultant c WHERE c.position = :position")})
 public class Consultant implements Serializable {
@@ -50,12 +50,12 @@ public class Consultant implements Serializable {
     @Size(max = 45)
     @Column(name = "position")
     private String position;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsultant")
-//    private List<Bankaccount> bankaccountList;
-//    @OneToMany(mappedBy = "idConsultant")
-//    private List<Credit> creditList;
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsultant")
-//    private List<Investment> investmentList;
+    @OneToMany(mappedBy = "idConsultant")
+    private transient List<Credit> creditList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsultant")
+    private transient List<Bankaccountevent> bankaccounteventList;
+    @OneToMany(mappedBy = "idConsultant")
+    private transient List<Investment> investmentList;
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     @ManyToOne(optional = false)
     private User idUser;
@@ -91,32 +91,32 @@ public class Consultant implements Serializable {
         this.position = position;
     }
 
-//    @XmlTransient
-//    public List<Bankaccount> getBankaccountList() {
-//        return bankaccountList;
-//    }
-//
-//    public void setBankaccountList(List<Bankaccount> bankaccountList) {
-//        this.bankaccountList = bankaccountList;
-//    }
-//
-//    @XmlTransient
-//    public List<Credit> getCreditList() {
-//        return creditList;
-//    }
-//
-//    public void setCreditList(List<Credit> creditList) {
-//        this.creditList = creditList;
-//    }
+    @XmlTransient
+    public List<Credit> getCreditList() {
+        return creditList;
+    }
 
-//    @XmlTransient
-//    public List<Investment> getInvestmentList() {
-//        return investmentList;
-//    }
-//
-//    public void setInvestmentList(List<Investment> investmentList) {
-//        this.investmentList = investmentList;
-//    }
+    public void setCreditList(List<Credit> creditList) {
+        this.creditList = creditList;
+    }
+
+    @XmlTransient
+    public List<Bankaccountevent> getBankaccounteventList() {
+        return bankaccounteventList;
+    }
+
+    public void setBankaccounteventList(List<Bankaccountevent> bankaccounteventList) {
+        this.bankaccounteventList = bankaccounteventList;
+    }
+
+    @XmlTransient
+    public List<Investment> getInvestmentList() {
+        return investmentList;
+    }
+
+    public void setInvestmentList(List<Investment> investmentList) {
+        this.investmentList = investmentList;
+    }
 
     public User getIdUser() {
         return idUser;

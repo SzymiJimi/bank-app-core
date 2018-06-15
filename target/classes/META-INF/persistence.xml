@@ -15,6 +15,26 @@
         <class>com.pai2.bank.app.model.Client</class>
         <class>com.pai2.bank.app.model.Consultant</class>
         <class>com.pai2.bank.app.model.Manager</class>
+        <class>com.pai2.bank.app.model.Accounttransfer </class>
+        <class>com.pai2.bank.app.model.Address </class>
+        <class>com.pai2.bank.app.model.Bankaccountevent </class>
+        <class>com.pai2.bank.app.model.Bankaccountoffer </class>
+        <class>com.pai2.bank.app.model.Banktransfer </class>
+        <class>com.pai2.bank.app.model.Credit </class>
+        <class>com.pai2.bank.app.model.Creditoffer </class>
+        <class>com.pai2.bank.app.model.Externalaccount </class>
+        <class>com.pai2.bank.app.model.Income </class>
+        <class>com.pai2.bank.app.model.Instalmentpayment </class>
+        <class>com.pai2.bank.app.model.Investment </class>
+        <class>com.pai2.bank.app.model.Investmentoffer </class>
+        <class>com.pai2.bank.app.model.Investmentstory </class>
+        <class>com.pai2.bank.app.model.Investpayment </class>
+        <class>com.pai2.bank.app.model.Investpaymentschedule </class>
+        <class>com.pai2.bank.app.model.Investtinstalmentpayment </class>
+        <class>com.pai2.bank.app.model.Loginhistory </class>
+        <class>com.pai2.bank.app.model.Payment </class>
+        <class>com.pai2.bank.app.model.Recurringbanktransfers </class>
+        <class>com.pai2.bank.app.model.Repaymentschedule </class>
         <properties>
             <!--<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp"/>-->
             <!--<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>-->

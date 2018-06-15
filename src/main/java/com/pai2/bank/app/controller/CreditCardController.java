@@ -1,10 +1,8 @@
 package com.pai2.bank.app.controller;
 
 
-import com.pai2.bank.app.dao.BankAccountDao;
 import com.pai2.bank.app.dao.CreditCardDao;
 import com.pai2.bank.app.model.Creditcard;
-import com.pai2.bank.app.model.JsonMessage;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

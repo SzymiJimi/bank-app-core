@@ -3,7 +3,6 @@ package com.pai2.bank.app.controller;
 
 import com.pai2.bank.app.dao.BankAccountDao;
 import com.pai2.bank.app.model.Bankaccount;
-import com.pai2.bank.app.model.JsonMessage;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -11,7 +10,6 @@ import javax.mvc.Controller;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

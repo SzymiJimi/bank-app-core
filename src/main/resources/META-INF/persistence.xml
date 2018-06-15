@@ -15,38 +15,39 @@
         <class>com.pai2.bank.app.model.Client</class>
         <class>com.pai2.bank.app.model.Consultant</class>
         <class>com.pai2.bank.app.model.Manager</class>
+        <class>com.pai2.bank.app.model.Accounttransfer </class>
+        <class>com.pai2.bank.app.model.Address </class>
+        <class>com.pai2.bank.app.model.Bankaccountevent </class>
+        <class>com.pai2.bank.app.model.Bankaccountoffer </class>
+        <class>com.pai2.bank.app.model.Banktransfer </class>
+        <class>com.pai2.bank.app.model.Credit </class>
+        <class>com.pai2.bank.app.model.Creditoffer </class>
+        <class>com.pai2.bank.app.model.Externalaccount </class>
+        <class>com.pai2.bank.app.model.Income </class>
+        <class>com.pai2.bank.app.model.Instalmentpayment </class>
+        <class>com.pai2.bank.app.model.Investment </class>
+        <class>com.pai2.bank.app.model.Investmentoffer </class>
+        <class>com.pai2.bank.app.model.Investmentstory </class>
+        <class>com.pai2.bank.app.model.Investpayment </class>
+        <class>com.pai2.bank.app.model.Investpaymentschedule </class>
+        <class>com.pai2.bank.app.model.Investtinstalmentpayment </class>
+        <class>com.pai2.bank.app.model.Loginhistory </class>
+        <class>com.pai2.bank.app.model.Payment </class>
+        <class>com.pai2.bank.app.model.Recurringbanktransfers </class>
+        <class>com.pai2.bank.app.model.Repaymentschedule </class>
         <properties>
-            <!--<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp"/>-->
-            <!--<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>-->
-            <!--<property name="hibernate.connection.username" value="root"/>-->
-            <!--<property name="hibernate.connection.password" value="admin"/>-->
-            <!--<property name="hibernate.archive.autodetection" value="class"/>-->
-            <!--<property name="hibernate.show_sql" value="true"/>-->
-            <!--<property name="hibernate.format_sql" value="true"/>-->
-            <!--<property name="hbm2ddl.auto" value="update"/>-->
-            <!--<property name="hibernate.transaction.manager_lookup_class" value="com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup"/>-->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <!--<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>-->
-            <!--<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>-->
-            <!-- The JDBC URL to the database instance -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
-            <!-- The database username -->
             <property name="javax.persistence.jdbc.user" value="root" />
-            <!-- The database password -->
             <property name="javax.persistence.jdbc.password" value="admin" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="javax.persistence.jdbc.useSSL" value="false"/>
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
-
-
             <property name="hibernate.archive.autodetection" value="class" />
-            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />-->
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp" />
             <property name="hibernate.connection.username" value="root" />
             <property name="hibernate.connection.password" value="admin" />
-            <!-- <property name="hibernate.show_sql" value="true"/> -->
             <property name="hibernate.flushMode" value="FLUSH_AUTO" />
 
         </properties>

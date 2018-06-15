@@ -7,7 +7,6 @@ package com.pai2.bank.app.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,8 +18,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -55,11 +52,13 @@ public class Creditcard implements Serializable {
     @Size(max = 45)
     @Column(name = "creditCardNumber")
     private String creditCardNumber;
+    @Size(max = 4)
     @Column(name = "pinCode")
-    private Integer pinCode;
+    private String pinCode;
     @Size(max = 45)
     @Column(name = "state")
     private String state;
+    @Size(max = 20)
     @Column(name = "expirationDate")
     private String expirationDate;
     @Size(max = 45)
@@ -71,7 +70,7 @@ public class Creditcard implements Serializable {
     @Column(name = "monthLimit")
     private BigDecimal monthLimit;
     @JoinColumn(name = "idBankAccount", referencedColumnName = "idBankAccount")
-    @ManyToOne(targetEntity = Bankaccount.class,  optional = false)
+    @ManyToOne(optional = false)
     private Bankaccount idBankAccount;
 
     public Creditcard() {
@@ -105,11 +104,11 @@ public class Creditcard implements Serializable {
         this.creditCardNumber = creditCardNumber;
     }
 
-    public Integer getPinCode() {
+    public String getPinCode() {
         return pinCode;
     }
 
-    public void setPinCode(Integer pinCode) {
+    public void setPinCode(String pinCode) {
         this.pinCode = pinCode;
     }
 

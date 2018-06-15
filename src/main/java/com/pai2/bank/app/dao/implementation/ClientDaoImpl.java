@@ -2,7 +2,6 @@ package com.pai2.bank.app.dao.implementation;
 
 import com.pai2.bank.app.dao.ClientDAO;
 import com.pai2.bank.app.model.Client;
-import com.pai2.bank.app.model.User;
 
 import javax.ejb.Stateless;
 import javax.persistence.Query;

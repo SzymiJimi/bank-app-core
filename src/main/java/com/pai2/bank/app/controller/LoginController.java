@@ -1,7 +1,6 @@
 package com.pai2.bank.app.controller;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.pai2.bank.app.dao.UserDAO;
 import com.pai2.bank.app.model.Credentials;
 import com.pai2.bank.app.model.JsonMessage;
@@ -32,7 +31,7 @@ public class LoginController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response authenticateUser(Credentials credentials){
-
+        System.out.println("Pobrany username:"+credentials.getUsername()+", hasło: "+credentials.getPassword());
         User loggedUser=  userDAO.findLoggingUser(credentials);
         if(loggedUser!=null){
 
@@ -63,22 +62,23 @@ public class LoginController {
         }
     }
 
-//    @POST
-//    @Produces(MediaType.APPLICATION_JSON)
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    @Path("getRole/{id}")
-//    public Response getUserRole( @PathParam("id")Integer idUser)
-//    {
-//        System.out.println("Pobiera role " + idUser);
-//        Role userRole = roleDAO.getUserRole(idUser);
-//        System.out.println(userRole);
-//        if (userRole!=null)
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/history")
+    public Response saveSignIn(Integer userId){
+
+//        if(loggedUser!=null){
+//
+//            System.out.println("Logged USER : "+ loggedUser.getUsername()+", "+ loggedUser.getEmail());
+//            return Response.ok().entity(loggedUser).build();
+//        }else
 //        {
-//            System.out.println("Znalazło");
-//            return Response.ok().entity(userRole).build();
-//        }else{
+//            System.out.println("User not foud");
 //            return Response.status(403).build();
 //        }
-//    }
+        return null;
+    }
+
 
 }
