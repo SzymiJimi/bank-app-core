@@ -33,12 +33,12 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Client.findAll", query = "SELECT c FROM Client c")
+        , @NamedQuery(name = "Client.findByIdUser", query = "SELECT c FROM Client c WHERE c.idUser.idUser = :idUser")
     , @NamedQuery(name = "Client.findByIdClient", query = "SELECT c FROM Client c WHERE c.idClient = :idClient")})
 public class Client implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
     @NotNull
     @Column(name = "idClient")
     private Integer idClient;
@@ -50,7 +50,7 @@ public class Client implements Serializable {
     @ManyToMany
     private List<Credit> creditList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idClient")
-    private List<Bankaccount> bankaccountList;
+    private transient List<Bankaccount> bankaccountList;
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     @ManyToOne(optional = false)
     private User idUser;

@@ -44,7 +44,6 @@ public class Bankaccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
     @NotNull
     @Column(name = "idBankAccount")
     private Integer idBankAccount;
@@ -73,13 +72,13 @@ public class Bankaccount implements Serializable {
     @ManyToOne(optional = false)
     private Client idClient;
     @OneToMany(mappedBy = "fromAccount")
-    private List<Banktransfer> banktransferList;
+    private transient List<Banktransfer> banktransferList;
     @OneToMany(mappedBy = "idInternalAccount")
-    private List<Accounttransfer> accounttransferList;
+    private transient List<Accounttransfer> accounttransferList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idBankAccount")
-    private List<Bankaccountevent> bankaccounteventList;
+    private transient List<Bankaccountevent> bankaccounteventList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idBankAccount")
-    private List<Creditcard> creditcardList;
+    private transient List<Creditcard> creditcardList;
 
     public Bankaccount() {
     }

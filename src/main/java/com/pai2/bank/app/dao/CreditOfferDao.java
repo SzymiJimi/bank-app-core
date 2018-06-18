@@ -8,5 +8,5 @@ import java.util.List;
  * Created by Szymon on 14.06.2018.
  */
 public interface CreditOfferDao extends Dao<Integer, Creditoffer> {
-    List<Creditoffer> findCreditOfferById(Integer creditOfferId);
+
 }

@@ -19,12 +19,7 @@ import java.util.List;
 public class AccountTransferDaoImpl extends DaoImpl<Integer, Accounttransfer> implements AccountTransferDao {
 
 
-    @Override
-   public List<Accounttransfer> findAccountTransferbyBankAccountId(Integer bankAccountId){
-        Query query = (Query) getEntityManager().createQuery("SELECT b FROM Accounttransfer b WHERE b.idBankAccount.idBankAccount="+ bankAccountId);
-        System.out.println("Wyniki pobierania tranzakcji: "+query.getResultList());
-        return new ArrayList<Accounttransfer>(query.getResultList());
-    }
+
 
 
 

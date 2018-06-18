@@ -48,7 +48,6 @@ public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "idPerson")
     private Integer idPerson;
     @Size(max = 45)
@@ -85,7 +84,7 @@ public class Person implements Serializable {
     @ManyToOne
     private Address idAddressForCorrespondence;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPerson")
-    private List<User> userList;
+    private transient List<User> userList;
 
     public Person() {
     }

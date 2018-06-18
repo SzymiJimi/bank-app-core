@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface BankAccountOfferDao extends Dao<Integer, Bankaccountoffer> {
 
-    List<Bankaccountoffer> findOfferById(Integer bankAccountOfferId);
+
 
 }

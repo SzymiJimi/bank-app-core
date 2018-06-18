@@ -44,7 +44,6 @@ public class Creditcard implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "idCreditCard")
     private Integer idCreditCard;
     @Size(max = 45)

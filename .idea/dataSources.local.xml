@@ -19,5 +19,14 @@
       <user-name>root</user-name>
       <introspection-schemas>*:bankapp</introspection-schemas>
     </data-source>
+    <data-source name="bank-app/Hibernate" uuid="fb6c3abf-b64f-435e-84dd-7062fa2a3c86">
+      <database-info product="MySQL" version="8.0.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:bankapp</introspection-schemas>
+    </data-source>
   </component>
 </project>

@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<persistence version="2.0"-->
-             <!--xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-             <!--xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">-->
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+<!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">-->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
     <persistence-unit name="bank-app" transaction-type="JTA">
-        <!-- Persistence provider -->
         <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
-        <!--<non-jta-data-source>java:comp/env/jdbc/BankApp</non-jta-data-source>-->
-        <!-- Entity classes -->
-        <jta-data-source>jdbc/MysqlDS</jta-data-source>
+        <!--<jta-data-source>java:openejb/Resource/BankApp</jta-data-source>-->
+        <class>com.pai2.bank.app.model.Bankaccount</class>
+        <class>com.pai2.bank.app.model.Person</class>
+        <class>com.pai2.bank.app.model.Creditcard</class>
         <class>com.pai2.bank.app.model.User</class>
+        <class>com.pai2.bank.app.model.Client</class>
+        <class>com.pai2.bank.app.model.Consultant</class>
+        <class>com.pai2.bank.app.model.Manager</class>
+        <class>com.pai2.bank.app.model.Accounttransfer </class>
+        <class>com.pai2.bank.app.model.Address </class>
+        <class>com.pai2.bank.app.model.Bankaccountevent </class>
+        <class>com.pai2.bank.app.model.Bankaccountoffer </class>
+        <class>com.pai2.bank.app.model.Banktransfer </class>
+        <class>com.pai2.bank.app.model.Credit </class>
+        <class>com.pai2.bank.app.model.Creditoffer </class>
+        <class>com.pai2.bank.app.model.Externalaccount </class>
+        <class>com.pai2.bank.app.model.Income </class>
+        <class>com.pai2.bank.app.model.Instalmentpayment </class>
+        <class>com.pai2.bank.app.model.Investment </class>
+        <class>com.pai2.bank.app.model.Investmentoffer </class>
+        <class>com.pai2.bank.app.model.Investmentstory </class>
+        <class>com.pai2.bank.app.model.Investpayment </class>
+        <class>com.pai2.bank.app.model.Investpaymentschedule </class>
+        <class>com.pai2.bank.app.model.Investtinstalmentpayment </class>
+        <class>com.pai2.bank.app.model.Loginhistory </class>
+        <class>com.pai2.bank.app.model.Payment </class>
+        <class>com.pai2.bank.app.model.Recurringbanktransfers </class>
+        <class>com.pai2.bank.app.model.Repaymentschedule </class>
         <properties>
-            <!-- The JDBC driver of your database -->
-            <!--<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp"/>-->
-
-            <!--<property name="hibernate.connection.username" value="root" />-->
-
-            <!--<property name="hibernate.connection.password" value="admin" />-->
-
-            <!--<property name="hibernate.hbm2ddl.auto" value="update" />-->
-
-            <!--<property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/BankApp"/>-->
-
-
-
-
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <!--<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>-->
-            <!--<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>-->
-            <!-- The JDBC URL to the database instance -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bankapp"/>
-            <!-- The database username -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/BankApp?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
             <property name="javax.persistence.jdbc.user" value="root" />
-            <!-- The database password -->
-            <property name="javax.persistence.jdbc.password" value="laczki3" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
-
-
+            <property name="javax.persistence.jdbc.useSSL" value="false"/>
             <property name="hibernate.archive.autodetection" value="class" />
-            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />-->
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BankApp" />
             <property name="hibernate.connection.username" value="root" />
-            <property name="hibernate.connection.password" value="laczki3" />
-            <!-- <property name="hibernate.show_sql" value="true"/> -->
+            <property name="hibernate.connection.password" value="admin" />
             <property name="hibernate.flushMode" value="FLUSH_AUTO" />
 
         </properties>
     </persistence-unit>
-
 </persistence>

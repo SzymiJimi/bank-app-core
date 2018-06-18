@@ -8,5 +8,6 @@ import java.util.List;
  * Created by Szymon on 14.06.2018.
  */
 public interface AddressDao extends Dao<Integer, Address> {
-    List<Address> findAdresById(Integer addressId);
+
+
 }

@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Manager.findAll", query = "SELECT m FROM Manager m")
     , @NamedQuery(name = "Manager.findByIdManager", query = "SELECT m FROM Manager m WHERE m.idManager = :idManager")
+        , @NamedQuery(name = "Manager.findByIdUser", query = "SELECT m FROM Manager m WHERE m.idUser.idUser = :idUser")
     , @NamedQuery(name = "Manager.findBySalary", query = "SELECT m FROM Manager m WHERE m.salary = :salary")})
 public class Manager implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
     @NotNull
     @Column(name = "idManager")
     private Integer idManager;
@@ -45,14 +45,14 @@ public class Manager implements Serializable {
     @Column(name = "salary")
     private BigDecimal salary;
     @OneToMany(mappedBy = "idManager")
-    private List<Creditoffer> creditofferList;
+    private transient List<Creditoffer> creditofferList;
     @OneToMany(mappedBy = "idManager")
-    private List<Investmentoffer> investmentofferList;
+    private transient List<Investmentoffer> investmentofferList;
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     @ManyToOne(optional = false)
     private User idUser;
     @OneToMany(mappedBy = "idManager")
-    private List<Bankaccountoffer> bankaccountofferList;
+    private transient List<Bankaccountoffer> bankaccountofferList;
 
     public Manager() {
     }

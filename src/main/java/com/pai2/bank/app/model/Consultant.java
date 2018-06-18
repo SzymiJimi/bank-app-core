@@ -33,6 +33,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Consultant.findAll", query = "SELECT c FROM Consultant c")
+        , @NamedQuery(name = "Consultant.findByIdUser", query = "SELECT c FROM Consultant c WHERE c.idUser.idUser = :idUser")
     , @NamedQuery(name = "Consultant.findByIdConsultant", query = "SELECT c FROM Consultant c WHERE c.idConsultant = :idConsultant")
     , @NamedQuery(name = "Consultant.findBySalary", query = "SELECT c FROM Consultant c WHERE c.salary = :salary")
     , @NamedQuery(name = "Consultant.findByPosition", query = "SELECT c FROM Consultant c WHERE c.position = :position")})
@@ -40,7 +41,6 @@ public class Consultant implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
     @NotNull
     @Column(name = "idConsultant")
     private Integer idConsultant;
@@ -51,11 +51,11 @@ public class Consultant implements Serializable {
     @Column(name = "position")
     private String position;
     @OneToMany(mappedBy = "idConsultant")
-    private List<Credit> creditList;
+    private transient List<Credit> creditList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idConsultant")
-    private List<Bankaccountevent> bankaccounteventList;
+    private transient List<Bankaccountevent> bankaccounteventList;
     @OneToMany(mappedBy = "idConsultant")
-    private List<Investment> investmentList;
+    private transient List<Investment> investmentList;
     @JoinColumn(name = "idUser", referencedColumnName = "idUser")
     @ManyToOne(optional = false)
     private User idUser;

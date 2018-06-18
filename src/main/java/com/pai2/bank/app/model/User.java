@@ -43,7 +43,6 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "idUser")
     private Integer idUser;
     @Size(max = 45)
@@ -60,13 +59,13 @@ public class User implements Serializable {
     @Column(name = "registerDate")
     private String registerDate;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private List<Client> clientList;
+    private transient List<Client> clientList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private List<Manager> managerList;
+    private transient List<Manager> managerList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private List<Loginhistory> loginhistoryList;
+    private transient List<Loginhistory> loginhistoryList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
-    private List<Consultant> consultantList;
+    private transient List<Consultant> consultantList;
     @JoinColumn(name = "idPerson", referencedColumnName = "idPerson")
     @ManyToOne(optional = false)
     private Person idPerson;

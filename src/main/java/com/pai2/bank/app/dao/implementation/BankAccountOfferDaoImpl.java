@@ -11,9 +11,5 @@ import java.util.List;
  * Created by Szymon on 14.06.2018.
  */
 public class BankAccountOfferDaoImpl extends DaoImpl<Integer, Bankaccountoffer> implements BankAccountOfferDao {
-    @Override
-    public List<Bankaccountoffer> findOfferById(Integer bankAccountOfferId) {
-        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccountoffer b WHERE b.idBankAccountOffer.idBankAccountOffer="+ bankAccountOfferId);
-        return new ArrayList<Bankaccountoffer>(query.getResultList());
-    }
+
 }

@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface BankAccounteventDao extends Dao<Integer, Bankaccountevent> {
 
-    List<Bankaccountevent> findBankAccountEventById(Integer bankAccountEventId);
+
 
 }

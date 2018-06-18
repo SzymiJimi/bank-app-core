@@ -16,11 +16,5 @@ import java.util.List;
 public class AddressDaoImpl extends DaoImpl<Integer, Address> implements AddressDao {
 
 
-    @Override
-    public List<Address> findAdresById(Integer addressId) {
-        Query query = (Query) getEntityManager().createQuery("SELECT b FROM Address b WHERE b.idAdress.idAdress="+ addressId);
-        System.out.println("Wyniki pobierania tranzakcji: "+query.getResultList());
 
-        return new ArrayList<Address>(query.getResultList());
-    }
 }

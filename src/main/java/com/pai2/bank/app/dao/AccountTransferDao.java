@@ -9,8 +9,5 @@ import java.util.List;
  */
 public interface AccountTransferDao extends Dao<Integer, Accounttransfer> {
 
-   // public Set<Accounttransfer> getAllAccountTransfer();
-    List<Accounttransfer> findAccountTransferbyBankAccountId(Integer bankAccountId);
-
 
 }

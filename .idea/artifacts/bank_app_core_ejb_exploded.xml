@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="bank-app-core:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bank_app_core_ejb_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="bank-app-core/ejb/EJB" />
+      <element id="javaee-facet-classes" facet="bank-app-core/ejb/EJB" />
+    </root>
+  </artifact>
+</component>

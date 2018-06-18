@@ -11,10 +11,5 @@ import java.util.List;
  * Created by Szymon on 14.06.2018.
  */
 public class BankAccountEventDaoImpl extends DaoImpl<Integer, Bankaccountevent> implements BankAccounteventDao {
-    @Override
-    public List<Bankaccountevent> findBankAccountEventById(Integer bankAccountEventId) {
-        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccountevent b WHERE b.idBankAccountEvent.idBankAccountEvent ="+ bankAccountEventId);
-        System.out.println("Wyniki pobierania tranzakcji: "+query.getResultList());
-        return new ArrayList<Bankaccountevent>(query.getResultList());
-    }
+
 }
