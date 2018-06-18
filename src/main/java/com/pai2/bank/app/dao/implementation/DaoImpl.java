@@ -31,7 +31,7 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     }
 
     @PostConstruct
-    private void createEntityManager() {
+    public void createEntityManager() {
         try{
             entityManagerFactory = Persistence.createEntityManagerFactory("bank-app");
             entityManager = entityManagerFactory.createEntityManager();
@@ -59,7 +59,7 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     @Override
     public E findById(K id) {
         E entity = getEntityManager().find(entityClass, id);
-        closeEntityManager();
+//        getEntityManager().clear();
         if (entity != null) {
             return entity;
         }
@@ -75,14 +75,13 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     public Set<E> getAll() {
         Query query = getEntityManager().createQuery("from " + entityClass.getCanonicalName() + " e", entityClass);
         List<E> res = query.getResultList();
-        closeEntityManager();
+
         return new HashSet<E>(res);
     }
 
 
     @Override
     public E persist(E entity) {
-
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<E>> constraintViolations = validator.validate(entity);
@@ -92,13 +91,16 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
                 ConstraintViolation<E> cv = iterator.next();
                 System.err.println(cv.getRootBeanClass().getName()+"."+cv.getPropertyPath() + " " +cv.getMessage());
             }
+
         }else{
             getEntityManager().getTransaction().begin();
             getEntityManager().persist(entity);
             getEntityManager().flush();
             getEntityManager().clear();
             getEntityManager().getTransaction().commit();
-            getEntityManager().close();
+
+
+//            getEntityManager().close();
         }
         return entity;
     }

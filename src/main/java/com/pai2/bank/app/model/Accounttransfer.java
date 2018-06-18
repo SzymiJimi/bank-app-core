@@ -33,10 +33,10 @@ public class Accounttransfer implements Serializable {
     @OneToMany(mappedBy = "toAccount")
     private transient List<Banktransfer> banktransferList;
     @JoinColumn(name = "idInternalAccount", referencedColumnName = "idBankAccount")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Bankaccount idInternalAccount;
     @JoinColumn(name = "idExternalAccount", referencedColumnName = "idExternalAccount")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Externalaccount idExternalAccount;
 
     public Accounttransfer() {

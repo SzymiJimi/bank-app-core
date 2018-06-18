@@ -23,6 +23,8 @@ public class BankAccountDaoImpl  extends DaoImpl<Integer, Bankaccount> implement
     @Override
     public Bankaccount findByAccountNumber(String accountNumber) {
         try{
+//            getEntityManager().close();
+//            createEntityManager();
             Query query =getEntityManager().createNamedQuery("Bankaccount.findByAccountNumber");
             query.setParameter("accountNumber", accountNumber);
             Bankaccount bankaccount = (Bankaccount) query.getSingleResult();

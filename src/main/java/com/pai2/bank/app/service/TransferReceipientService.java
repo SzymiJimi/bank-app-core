@@ -27,17 +27,22 @@ public class TransferReceipientService {
     public Accounttransfer setTransactionReceipient(Accounttransfer accounttransfer) {
 
 //        try{
+        System.out.println("Numerek konta: "+accounttransfer.getIdInternalAccount());
         Accounttransfer result = accountTransferDao.findById(accounttransfer.getRecipientAccount());
 
         if (result != null) {
-            System.out.println("External account fijolek" + result.getIdExternalAccount());
-            return result;
+
+            return accountTransferDao.persist(result);
         } else {
             try {
                 Bankaccount bankaccount = bankAccountDao.findByAccountNumber(accounttransfer.getRecipientAccount());
+                bankAccountDao.persist(bankaccount);
+                accounttransfer.setIdExternalAccount(null);
                 accounttransfer.setIdInternalAccount(bankaccount);
                 return accountTransferDao.persist(accounttransfer);
             } catch (Exception e) {
+                System.out.println("Nie znalazło konta... "+ e.toString());
+                System.out.println(e.toString());
                 Externalaccount externalaccount = new Externalaccount();
                 externalaccount.setAccountNumber(accounttransfer.getRecipientAccount());
                 Externalaccount returnedAccount = externalAccountDao.persist(externalaccount);
