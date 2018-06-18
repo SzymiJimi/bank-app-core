@@ -16,9 +16,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Controller
-@Stateless
 @Path("login")
-@Produces({MediaType.APPLICATION_JSON})
 public class LoginController {
 
     @EJB(beanInterface = UserDAO.class, beanName = "UserDaoImpl")

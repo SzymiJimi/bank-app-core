@@ -18,10 +18,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.Set;
 
-@Controller
-@Stateless
-@Path("home")
-@Produces({MediaType.APPLICATION_JSON})
+//@Controller
+//@Path("home")
 public class HomeController {
 
 //    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
@@ -32,8 +30,7 @@ public class HomeController {
     private UserDAO userDAO;
 
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
+
     public Set<User> sayHello() throws SystemException, NotSupportedException {
 
 //        EntityManager em = ENTITY_MANAGER_FACTORY().c

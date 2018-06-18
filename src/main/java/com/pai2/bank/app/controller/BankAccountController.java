@@ -1,6 +1,7 @@
 package com.pai2.bank.app.controller;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.pai2.bank.app.dao.BankAccountDao;
 import com.pai2.bank.app.model.Bankaccount;
 
@@ -13,9 +14,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Controller
-@Stateless
 @Path("bankAccount")
-@Produces({MediaType.APPLICATION_JSON})
 public class BankAccountController {
 
     @EJB(beanInterface = BankAccountDao.class, beanName = "BankAccountDaoImpl")
@@ -23,8 +22,8 @@ public class BankAccountController {
 
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes("application/json")
+    @Produces("application/json")
     @Path("/{clientId}")
     public Response getClientBankAcc(@PathParam("clientId")Integer clientId )
     {

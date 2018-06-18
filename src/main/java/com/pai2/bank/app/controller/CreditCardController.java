@@ -13,9 +13,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Controller
-@Stateless
 @Path("card")
-@Produces({MediaType.APPLICATION_JSON})
 public class CreditCardController {
 
     @EJB(beanInterface = CreditCardDao.class, beanName = "CreditCardDaoImpl")
@@ -29,6 +27,7 @@ public class CreditCardController {
     {
         try{
             List<Creditcard> cards =  creditCardDao.findCreditCardByAccountId(bankAccId);
+            System.out.println("Znalezione karty: "+cards);
             return Response.ok().entity(cards).build();
         }catch(Exception e)
         {

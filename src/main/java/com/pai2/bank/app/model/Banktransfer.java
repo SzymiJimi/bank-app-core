@@ -5,6 +5,9 @@
  */
 package com.pai2.bank.app.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -36,6 +39,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Banktransfer.findAll", query = "SELECT b FROM Banktransfer b")
     , @NamedQuery(name = "Banktransfer.findByIdBankTransfer", query = "SELECT b FROM Banktransfer b WHERE b.idBankTransfer = :idBankTransfer")
     , @NamedQuery(name = "Banktransfer.findByDateOfOrder", query = "SELECT b FROM Banktransfer b WHERE b.dateOfOrder = :dateOfOrder")
+    , @NamedQuery(name = "Banktransfer.findUserByOwner", query = "SELECT u FROM  User u, Client cl, Bankaccount bac WHERE cl.idUser.idUser = u.idUser AND bac.idClient.idClient = cl.idClient AND  bac.idBankAccount =: bankAcc")
     , @NamedQuery(name = "Banktransfer.findByRecipient", query = "SELECT b FROM Banktransfer b WHERE b.recipient = :recipient")
     , @NamedQuery(name = "Banktransfer.findByAddress", query = "SELECT b FROM Banktransfer b WHERE b.address = :address")
     , @NamedQuery(name = "Banktransfer.findByDescription", query = "SELECT b FROM Banktransfer b WHERE b.description = :description")
@@ -68,9 +72,9 @@ public class Banktransfer implements Serializable {
     private String state;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "amount")
-    private BigDecimal amount;
+    private  BigDecimal amount;
     @Column(name = "amountStateBefore")
-    private BigDecimal amountStateBefore;
+    private  BigDecimal amountStateBefore;
     @Size(max = 20)
     @Column(name = "dateOfExecution")
     private String dateOfExecution;
@@ -79,14 +83,48 @@ public class Banktransfer implements Serializable {
     private String type;
     @JoinColumn(name = "toAccount", referencedColumnName = "recipientAccount")
     @ManyToOne
-    private Accounttransfer toAccount;
+    private  Accounttransfer toAccount;
     @JoinColumn(name = "fromAccount", referencedColumnName = "idBankAccount")
     @ManyToOne
     private Bankaccount fromAccount;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLastBankTransfer")
-    private transient List<Recurringbanktransfers> recurringbanktransfersList;
+    private transient  List<Recurringbanktransfers> recurringbanktransfersList;
+
+//    public Banktransfer( ) {
+//        System.out.println("Weszło w bank transfer");
+////        System.out.println("Weszło w nowy");
+////        this.address=address;
+////        this.amount= amount;
+////        this.amountStateBefore = amountStateBefore;
+////        this.dateOfExecution = dateOfExecution;
+////        this.dateOfOrder = dateOfOrder;
+////        this.description = description;
+////        this.fromAccount = fromAccount;
+////        this.recipient= recipient;
+////        this.state = state;
+////        this.toAccount = toAccount;
+////        this.type =type;
+//    }
+
 
     public Banktransfer() {
+        System.out.println("Wywołał się konstruktow bez args");
+    }
+
+    @JsonCreator
+    public Banktransfer(@JsonProperty("dateOfOrder")String dateOfOrder, @JsonProperty("recipient")String recipient,  @JsonProperty("address")String address, @JsonProperty("description")String description, @JsonProperty("state")String state, @JsonProperty("amount")BigDecimal amount, @JsonProperty("amountStateBefore")BigDecimal amountStateBefore,  @JsonProperty("dateOfExecution")String dateOfExecution,  @JsonProperty("type")String type, @JsonProperty("toAccount")Accounttransfer toAccount, @JsonProperty("fromAccount")Bankaccount fromAccount) {
+        System.out.println("Wywołał się konstruktow all args");
+        this.dateOfOrder = dateOfOrder;
+        this.recipient = recipient;
+        this.address = address;
+        this.description = description;
+        this.state = state;
+        this.amount = amount;
+        this.amountStateBefore = amountStateBefore;
+        this.dateOfExecution = dateOfExecution;
+        this.type = type;
+        this.toAccount = toAccount;
+        this.fromAccount = fromAccount;
     }
 
     public Banktransfer(Integer idBankTransfer) {

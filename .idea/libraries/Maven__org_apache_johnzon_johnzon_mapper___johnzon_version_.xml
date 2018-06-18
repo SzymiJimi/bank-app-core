@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.johnzon:johnzon-mapper:${johnzon.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/johnzon/johnzon-mapper/${johnzon.version}/johnzon-mapper-${johnzon.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/johnzon/johnzon-mapper/${johnzon.version}/johnzon-mapper-${johnzon.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/johnzon/johnzon-mapper/${johnzon.version}/johnzon-mapper-${johnzon.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
