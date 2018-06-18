@@ -9,4 +9,6 @@ public interface BankAccountDao extends Dao<Integer,Bankaccount> {
 
     List<Bankaccount> findBankAccountsByClientId(Integer userId);
 
+    Bankaccount findByAccountNumber(String accountNumber);
+
 }

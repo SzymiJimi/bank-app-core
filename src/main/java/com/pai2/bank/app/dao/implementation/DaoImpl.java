@@ -5,9 +5,14 @@ import com.pai2.bank.app.dao.Dao;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.persistence.*;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import javax.ws.rs.NotFoundException;
 import java.lang.reflect.ParameterizedType;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -54,6 +59,7 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     @Override
     public E findById(K id) {
         E entity = getEntityManager().find(entityClass, id);
+        closeEntityManager();
         if (entity != null) {
             return entity;
         }
@@ -69,8 +75,34 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     public Set<E> getAll() {
         Query query = getEntityManager().createQuery("from " + entityClass.getCanonicalName() + " e", entityClass);
         List<E> res = query.getResultList();
+        closeEntityManager();
         return new HashSet<E>(res);
     }
+
+
+    @Override
+    public E persist(E entity) {
+
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+        Set<ConstraintViolation<E>> constraintViolations = validator.validate(entity);
+        if(constraintViolations.size() > 0){
+            Iterator<ConstraintViolation<E>> iterator = constraintViolations.iterator();
+            while(iterator.hasNext()){
+                ConstraintViolation<E> cv = iterator.next();
+                System.err.println(cv.getRootBeanClass().getName()+"."+cv.getPropertyPath() + " " +cv.getMessage());
+            }
+        }else{
+            getEntityManager().getTransaction().begin();
+            getEntityManager().persist(entity);
+            getEntityManager().flush();
+            getEntityManager().clear();
+            getEntityManager().getTransaction().commit();
+            getEntityManager().close();
+        }
+        return entity;
+    }
+
 
     protected EntityManager getEntityManager() {
         return entityManager;

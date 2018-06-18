@@ -7,16 +7,7 @@ package com.pai2.bank.app.model;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -36,9 +27,8 @@ public class Accounttransfer implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @NotNull
     @Size(min = 1, max = 26)
-    @Column(name = "recipientAccount")
+    @Column(name = "recipientAccount", length = 26)
     private String recipientAccount;
     @OneToMany(mappedBy = "toAccount")
     private transient List<Banktransfer> banktransferList;
