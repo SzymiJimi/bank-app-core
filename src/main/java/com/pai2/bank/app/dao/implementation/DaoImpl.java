@@ -79,6 +79,22 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
         return new HashSet<E>(res);
     }
 
+    @Override
+    public E merge(E entity)
+    {
+        try {
+            getEntityManager().getTransaction().begin();
+            entity = getEntityManager().merge(entity);
+            getEntityManager().flush();
+            getEntityManager().clear();
+            getEntityManager().getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            getEntityManager().getTransaction().rollback();
+        }
+        return entity;
+    }
+
 
     @Override
     public E persist(E entity) {

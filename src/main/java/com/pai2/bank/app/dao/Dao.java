@@ -16,4 +16,6 @@ public interface Dao<K, E> extends Serializable {
 
     public E persist(E entity);
 
+    public E merge(E entity);
+
 }

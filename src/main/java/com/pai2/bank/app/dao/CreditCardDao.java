@@ -9,5 +9,5 @@ public interface CreditCardDao extends Dao<Integer,Creditcard> {
 
     List<Creditcard> findCreditCardByAccountId(Integer accountId);
 
-
+//    void updatePin(Integer cardId);
 }
