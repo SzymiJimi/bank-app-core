@@ -42,7 +42,7 @@ public class CreditCardController {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/changePin")
+    @Path("/changeCard")
     public Response getCreditCardsByBankAcc(Creditcard creditcard )
     {
         try{
