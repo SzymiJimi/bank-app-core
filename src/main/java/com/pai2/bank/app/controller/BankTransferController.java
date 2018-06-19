@@ -98,11 +98,13 @@ public class BankTransferController {
 
             return Response.ok().entity("Pozytywnie stworzono transfer").build();
         }catch(Exception e ){
-            e.printStackTrace();
+            System.out.println("Nieudane dodanie transferu: "+ e.toString());
             return Response.status(403).build();
         }
 
 
     }
+
+
 
 }

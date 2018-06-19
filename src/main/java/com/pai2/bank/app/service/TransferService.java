@@ -21,8 +21,10 @@ public class TransferService {
     public void registerTransaction(Banktransfer banktransfer){
         Accounttransfer accounttransfer= transferReceipientService.setTransactionReceipient(banktransfer.getToAccount());
         banktransfer.setToAccount(accounttransfer);
+        System.out.println("Data transferu przed dodaniem: "+banktransfer.getDateOfExecution());
+        banktransfer.setDateOfExecution("");
         Banktransfer returnedTransfer= bankTransferDao.persist(banktransfer);
-        System.out.println(returnedTransfer);
+        System.out.println("Dodany transfer" + returnedTransfer);
 
     }
 

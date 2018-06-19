@@ -11,4 +11,6 @@ public interface BankAccountDao extends Dao<Integer,Bankaccount> {
 
     Bankaccount findByAccountNumber(String accountNumber);
 
+
+
 }

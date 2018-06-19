@@ -36,7 +36,9 @@ public class TransferReceipientService {
         } else {
             try {
                 Bankaccount bankaccount = bankAccountDao.findByAccountNumber(accounttransfer.getRecipientAccount());
-                bankAccountDao.persist(bankaccount);
+                if(bankaccount!=null){
+                    bankAccountDao.persist(bankaccount);
+                }
                 accounttransfer.setIdExternalAccount(null);
                 accounttransfer.setIdInternalAccount(bankaccount);
                 return accountTransferDao.persist(accounttransfer);
