@@ -9,5 +9,6 @@ public interface UserDAO extends Dao<Integer,User>{
 
     public Set<User> getUserList();
     User findLoggingUser(Credentials credentials);
+    public void saveUser(User user);
 
 }
