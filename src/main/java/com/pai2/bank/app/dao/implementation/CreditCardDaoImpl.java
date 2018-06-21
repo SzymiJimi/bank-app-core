@@ -19,4 +19,11 @@ public class CreditCardDaoImpl  extends DaoImpl<Integer, Creditcard> implements 
         Query query = getEntityManager().createQuery("SELECT c FROM Creditcard c WHERE c.idBankAccount.idBankAccount="+ accountId);
         return new ArrayList<Creditcard>(query.getResultList());
     }
+
+//    @Override
+//    public void updatePin(Integer cardId) {
+//
+//    }
+
+
 }

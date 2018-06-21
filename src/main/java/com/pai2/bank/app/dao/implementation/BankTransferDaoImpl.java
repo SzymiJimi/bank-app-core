@@ -17,12 +17,15 @@ public class BankTransferDaoImpl extends DaoImpl<Integer, Banktransfer> implemen
 
     @Override
     public User findUser(Integer accountId) {
-        System.out.println("Weszło w szukanie usera");
         Query query =getEntityManager().createNamedQuery("Banktransfer.findUserByOwner");
-        System.out.println("Stworzyło query");
         query.setParameter("bankAcc", accountId);
-        System.out.println("Ustawiono parametr query");
-        System.out.println( "Wynik: "+ query.getSingleResult());
         return (User) query.getSingleResult();
+    }
+
+    @Override
+    public List<Banktransfer> getListByAccountId(Integer accountId) {
+        Query query =getEntityManager().createNamedQuery("Banktransfer.findByAccountId");
+        query.setParameter("idBankAcc", accountId);
+        return (List<Banktransfer>)query.getResultList();
     }
 }

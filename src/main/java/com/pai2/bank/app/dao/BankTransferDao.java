@@ -12,4 +12,6 @@ public interface BankTransferDao extends Dao<Integer, Banktransfer> {
 
         User findUser(Integer accountId);
 
+        List<Banktransfer> getListByAccountId(Integer accountId);
+
 }

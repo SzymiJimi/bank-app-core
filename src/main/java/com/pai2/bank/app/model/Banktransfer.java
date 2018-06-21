@@ -44,7 +44,8 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Banktransfer.findByAddress", query = "SELECT b FROM Banktransfer b WHERE b.address = :address")
     , @NamedQuery(name = "Banktransfer.findByDescription", query = "SELECT b FROM Banktransfer b WHERE b.description = :description")
     , @NamedQuery(name = "Banktransfer.findByState", query = "SELECT b FROM Banktransfer b WHERE b.state = :state")
-    , @NamedQuery(name = "Banktransfer.findByAmount", query = "SELECT b FROM Banktransfer b WHERE b.amount = :amount")
+        , @NamedQuery(name = "Banktransfer.findByAccountId", query = "SELECT b FROM Banktransfer b WHERE b.fromAccount.idBankAccount = :idBankAcc")
+        , @NamedQuery(name = "Banktransfer.findByAmount", query = "SELECT b FROM Banktransfer b WHERE b.amount = :amount")
     , @NamedQuery(name = "Banktransfer.findByAmountStateBefore", query = "SELECT b FROM Banktransfer b WHERE b.amountStateBefore = :amountStateBefore")
     , @NamedQuery(name = "Banktransfer.findByDateOfExecution", query = "SELECT b FROM Banktransfer b WHERE b.dateOfExecution = :dateOfExecution")
     , @NamedQuery(name = "Banktransfer.findByType", query = "SELECT b FROM Banktransfer b WHERE b.type = :type")})
@@ -52,7 +53,7 @@ public class Banktransfer implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idBankTransfer")
     private Integer idBankTransfer;
     @Size(max = 20)
@@ -82,7 +83,7 @@ public class Banktransfer implements Serializable {
     @Column(name = "type")
     private String type;
     @JoinColumn(name = "toAccount", referencedColumnName = "recipientAccount")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private  Accounttransfer toAccount;
     @JoinColumn(name = "fromAccount", referencedColumnName = "idBankAccount")
     @ManyToOne
@@ -90,30 +91,13 @@ public class Banktransfer implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLastBankTransfer")
     private transient  List<Recurringbanktransfers> recurringbanktransfersList;
 
-//    public Banktransfer( ) {
-//        System.out.println("Weszło w bank transfer");
-////        System.out.println("Weszło w nowy");
-////        this.address=address;
-////        this.amount= amount;
-////        this.amountStateBefore = amountStateBefore;
-////        this.dateOfExecution = dateOfExecution;
-////        this.dateOfOrder = dateOfOrder;
-////        this.description = description;
-////        this.fromAccount = fromAccount;
-////        this.recipient= recipient;
-////        this.state = state;
-////        this.toAccount = toAccount;
-////        this.type =type;
-//    }
 
 
     public Banktransfer() {
-        System.out.println("Wywołał się konstruktow bez args");
     }
 
     @JsonCreator
     public Banktransfer(@JsonProperty("dateOfOrder")String dateOfOrder, @JsonProperty("recipient")String recipient,  @JsonProperty("address")String address, @JsonProperty("description")String description, @JsonProperty("state")String state, @JsonProperty("amount")BigDecimal amount, @JsonProperty("amountStateBefore")BigDecimal amountStateBefore,  @JsonProperty("dateOfExecution")String dateOfExecution,  @JsonProperty("type")String type, @JsonProperty("toAccount")Accounttransfer toAccount, @JsonProperty("fromAccount")Bankaccount fromAccount) {
-        System.out.println("Wywołał się konstruktow all args");
         this.dateOfOrder = dateOfOrder;
         this.recipient = recipient;
         this.address = address;

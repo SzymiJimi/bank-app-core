@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Szymon on 14.06.2018.
  */
-public interface AccountTransferDao extends Dao<Integer, Accounttransfer> {
+public interface AccountTransferDao extends Dao<String, Accounttransfer> {
 
 
 }

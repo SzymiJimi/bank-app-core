@@ -27,7 +27,7 @@ public class SendEmailService {
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "465");
+        props.put("mail.smtp.port", "587");
 
 
         Session session = Session.getInstance(props,
@@ -58,6 +58,13 @@ public class SendEmailService {
             throw new RuntimeException(e);
         }
 
+    }
+
+
+    public String createEmailWithCode(String code){
+
+        return "Witaj, \n zarejestrowaliśmy Twoją prośbę o przelew. Aby wykonać przelew musisz potwierdzić go kodem.\n" +
+                "Twój kod to: "+code+", wpisz go w odpowiednim miejscu w aplikacji i zatwierdź przelew.";
     }
 
 

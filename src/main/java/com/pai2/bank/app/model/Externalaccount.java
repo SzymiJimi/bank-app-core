@@ -7,14 +7,7 @@ package com.pai2.bank.app.model;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -35,13 +28,13 @@ public class Externalaccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idExternalAccount")
     private Integer idExternalAccount;
     @Size(max = 26)
     @Column(name = "accountNumber")
     private String accountNumber;
-    @OneToMany(mappedBy = "idExternalAccount")
+    @OneToMany(mappedBy = "idExternalAccount" )
     private transient List<Accounttransfer> accounttransferList;
 
     public Externalaccount() {

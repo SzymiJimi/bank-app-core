@@ -13,4 +13,9 @@ public interface Dao<K, E> extends Serializable {
     public E findById(K id);
 
     public Set<E> getAll();
+
+    public E persist(E entity);
+
+    public E merge(E entity);
+
 }

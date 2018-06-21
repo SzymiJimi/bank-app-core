@@ -16,11 +16,6 @@ import java.util.List;
 
 
 @Stateless(name = "AccountTransferDaoImpl", mappedName = "AccountTransferDaoImpl")
-public class AccountTransferDaoImpl extends DaoImpl<Integer, Accounttransfer> implements AccountTransferDao {
-
-
-
-
-
+public class AccountTransferDaoImpl extends DaoImpl<String, Accounttransfer> implements AccountTransferDao {
 
 }
