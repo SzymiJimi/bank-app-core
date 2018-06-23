@@ -33,8 +33,8 @@ public class TransferAuthenticationService {
 
     }
     public String  generateBankAccount(){
-            StringBuilder sb = new StringBuilder(28);
-        for(int i=0; i<28; i++) {
+            StringBuilder sb = new StringBuilder(26);
+        for(int i=0; i<26; i++) {
             sb.append(NUMBER.charAt(rnd.nextInt(NUMBER.length())));
         }
             return sb.toString();

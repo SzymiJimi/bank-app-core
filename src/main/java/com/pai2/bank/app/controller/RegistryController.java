@@ -1,15 +1,11 @@
 package com.pai2.bank.app.controller;
 
-import com.pai2.bank.app.dao.ClientDAO;
-import com.pai2.bank.app.dao.ManagerDAO;
-import com.pai2.bank.app.dao.PersonDAO;
-import com.pai2.bank.app.dao.UserDAO;
+import com.pai2.bank.app.dao.*;
+import com.pai2.bank.app.dao.implementation.BankAccountDaoImpl;
 import com.pai2.bank.app.dao.implementation.ClientDaoImpl;
+import com.pai2.bank.app.dao.implementation.ConsultantDaoImpl;
 import com.pai2.bank.app.dao.implementation.ManagerDaoImpl;
-import com.pai2.bank.app.model.Client;
-import com.pai2.bank.app.model.Manager;
-import com.pai2.bank.app.model.Person;
-import com.pai2.bank.app.model.User;
+import com.pai2.bank.app.model.*;
 import com.pai2.bank.app.service.AuthenticationService;
 import com.pai2.bank.app.service.TransferAuthenticationService;
 
@@ -42,11 +38,12 @@ public class RegistryController {
         @EJB(beanInterface = UserDAO.class , beanName = "UserDaoImpl")
         private UserDAO userDAO;
 
-        @EJB(beanInterface = ClientDAO.class, beanName = "ClientDaoImpl")
+       @EJB(beanInterface = ClientDAO.class, beanName = "ClientDaoImpl")
         private ClientDAO clientDAO;
 
-//        @EJB(beanInterface = ManagerDAO.class, beanName = "ManagerDaoImpl")
-//        private ManagerDAO managerDAO;
+       @EJB(beanInterface = BankAccountDao.class, beanName = "BankAccountDaoImpl")
+       private  BankAccountDao bankAccountDao;
+
         @Path("new")
         @POST
         @Produces((MediaType.APPLICATION_JSON))
@@ -68,7 +65,7 @@ public class RegistryController {
             user.setRegisterDate("");
             user.setRegisterDate(date);
             System.out.println(user.getUsername() + user.getPassword());
-            System.out.println(Response.ok(user).build());
+
            return Response.ok(user).build();
 
 
@@ -96,9 +93,22 @@ public class RegistryController {
     @Produces((MediaType.APPLICATION_JSON))
     @Consumes((MediaType.APPLICATION_JSON))
     public Response saveCLient(Client client){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDate localDate = LocalDate.now();
+        String date = dtf.format(localDate);
         System.out.println("dodawanie clienta");
-        clientDAO.persist(client);
-        System.out.println("zapisałem clienta");
+        Client savedClient = clientDAO.persist(client);
+        Bankaccountoffer bankaccountoffer = new Bankaccountoffer();
+        bankaccountoffer.setIdBankAccountOffer(1);
+        Bankaccount bankaccount = new Bankaccount();
+        bankaccount.setIdClient(savedClient);
+        bankaccount.setAccountNumber(transferAuthenticationService.generateBankAccount());
+        bankaccount.setIdBankAccountOffer(bankaccountoffer);
+        bankaccount.setCreationDate(date);
+        bankaccount.setState("ACTIVE");
+         bankAccountDao.persist(bankaccount);
+        System.out.println(bankaccount);
+        System.out.println("zapisałem clienta " +client);
         return Response.ok(client).build();
     }
 

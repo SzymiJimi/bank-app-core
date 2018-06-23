@@ -2,6 +2,7 @@ package com.pai2.bank.app.dao.implementation;
 
 import com.pai2.bank.app.dao.BankAccountDao;
 import com.pai2.bank.app.model.Bankaccount;
+import com.pai2.bank.app.model.Manager;
 
 import javax.ejb.Stateless;
 import javax.persistence.NoResultException;
@@ -33,5 +34,9 @@ public class BankAccountDaoImpl  extends DaoImpl<Integer, Bankaccount> implement
             System.out.println(e.toString());
          return null;
         }
+    }
+    @Override
+    public void saveBankAccount(Bankaccount bankaccount) {
+
     }
 }

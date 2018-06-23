@@ -6,6 +6,7 @@ import com.pai2.bank.app.dao.PersonDAO;
 import com.pai2.bank.app.dao.implementation.BankAccountOfferDaoImpl;
 import com.pai2.bank.app.dao.implementation.PersonDAOImpl;
 import com.pai2.bank.app.model.Bankaccountoffer;
+import com.pai2.bank.app.model.Creditcard;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -14,6 +15,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.awt.*;
+import java.util.List;
 
 /**
  * Created by Szymon on 18.06.2018.
@@ -39,9 +41,18 @@ public class BankAccountOfferController {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response saveTest(Bankaccountoffer ob){
         System.out.println("dotarlem");
-        bankAccountOfferDao.save(ob);
+        bankAccountOfferDao.persist(ob);
         System.out.println("zapisalem" + ob);
         return Response.ok(ob).build();
 
     }
-}
+
+
+
+
+
+    }
+
+
+
+
