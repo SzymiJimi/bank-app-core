@@ -1,10 +1,7 @@
 package com.pai2.bank.app.controller;
 
 import com.pai2.bank.app.dao.*;
-import com.pai2.bank.app.dao.implementation.BankAccountDaoImpl;
-import com.pai2.bank.app.dao.implementation.ClientDaoImpl;
-import com.pai2.bank.app.dao.implementation.ConsultantDaoImpl;
-import com.pai2.bank.app.dao.implementation.ManagerDaoImpl;
+import com.pai2.bank.app.dao.implementation.*;
 import com.pai2.bank.app.model.*;
 import com.pai2.bank.app.service.AuthenticationService;
 import com.pai2.bank.app.service.TransferAuthenticationService;
@@ -43,6 +40,9 @@ public class RegistryController {
 
        @EJB(beanInterface = BankAccountDao.class, beanName = "BankAccountDaoImpl")
        private  BankAccountDao bankAccountDao;
+
+       @EJB(beanInterface = CreditCardDao.class, beanName = "CreditCardDaoImpl")
+       private CreditCardDao creditCardDao;
 
         @Path("new")
         @POST
@@ -106,7 +106,17 @@ public class RegistryController {
         bankaccount.setIdBankAccountOffer(bankaccountoffer);
         bankaccount.setCreationDate(date);
         bankaccount.setState("ACTIVE");
-         bankAccountDao.persist(bankaccount);
+        Bankaccount savedBankAccount =  bankAccountDao.persist(bankaccount);
+        Creditcard creditcard = new Creditcard();
+        creditcard.setName("MasterCard");
+        creditcard.setCreditCardNumber(transferAuthenticationService.generateCreditCardNumber());
+        creditcard.setPinCode(transferAuthenticationService.generatePinCode());
+        creditcard.setState("ACTIVE");
+        creditcard.setExpirationDate(date+1);
+        creditcard.setType("Płatnicza");
+        creditcard.setIdBankAccount(savedBankAccount);
+        creditCardDao.persist(creditcard);
+        System.out.println("karta kredytowa " +creditcard);
         System.out.println(bankaccount);
         System.out.println("zapisałem clienta " +client);
         return Response.ok(client).build();
