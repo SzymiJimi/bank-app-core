@@ -13,7 +13,6 @@ public class ClientDaoImpl extends DaoImpl<Integer,Client> implements ClientDAO 
     @Override
     public Client findClientWithUserId(Integer userId) {
         try{
-            System.out.println("User ID: "+ userId);
 
             Query query =getEntityManager().createNamedQuery("Client.findByIdUser");
             query.setParameter("idUser", userId);

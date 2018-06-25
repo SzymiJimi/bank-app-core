@@ -21,6 +21,7 @@
         <class>com.pai2.bank.app.model.Bankaccountoffer </class>
         <class>com.pai2.bank.app.model.Banktransfer </class>
         <class>com.pai2.bank.app.model.Credit </class>
+        <class>com.pai2.bank.app.model.Remember </class>
         <class>com.pai2.bank.app.model.Creditoffer </class>
         <class>com.pai2.bank.app.model.Externalaccount </class>
         <class>com.pai2.bank.app.model.Income </class>
