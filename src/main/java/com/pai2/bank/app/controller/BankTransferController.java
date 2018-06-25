@@ -46,19 +46,9 @@ public class BankTransferController {
     @Path("/sendMail")
     public Response sendEmail(){
 
-
-//        sendEmailService.sendEmail();
-
-//        if(loggedUser!=null){
-//
-//            System.out.println("Logged USER : "+ loggedUser.getUsername()+", "+ loggedUser.getEmail());
         JsonMessage message = new JsonMessage("Po wysłaniu:", 2);
             return Response.ok().entity(message).build();
-//        }else
-//        {
-//            System.out.println("User not foud");
-//            return Response.status(403).build();
-//        }
+
     }
 
 
@@ -80,10 +70,6 @@ public class BankTransferController {
             e.printStackTrace();
             return Response.status(403).build();
         }
-
-
-//            return Response.status(403).build();
-
 
     }
 
