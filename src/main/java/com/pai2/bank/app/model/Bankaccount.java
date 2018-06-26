@@ -82,6 +82,11 @@ public class Bankaccount implements Serializable {
         this.accountNumber = accountNumber;
     }
 
+    public Bankaccount(Integer idBankAccount, BigDecimal amount) {
+        this.idBankAccount = idBankAccount;
+        this.amount = amount;
+    }
+
     public Integer getIdBankAccount() {
         return idBankAccount;
     }

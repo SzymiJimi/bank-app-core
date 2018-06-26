@@ -18,12 +18,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.Set;
 
-//@Controller
-//@Path("home")
-public class HomeController {
 
-//    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
-//            .createEntityManagerFactory("bank-app");
+public class HomeController {
 
 
     @EJB(beanInterface = UserDAO.class, beanName = "UserDaoImpl")
@@ -33,18 +29,12 @@ public class HomeController {
 
     public Set<User> sayHello() throws SystemException, NotSupportedException {
 
-//        EntityManager em = ENTITY_MANAGER_FACTORY().c
-//        EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-//        EntityTransaction transaction = null;
-//        User tmpuser = new User(1, "SzymiJimi", "Szymon", "Jarząbek" , "rekas1@tlen.pl", "661000006", 1);
-//        manager.persist(tmpuser);
         Set<User> users= userDAO.getUserList();
 
         for (User user :users) {
             System.out.println(user.getUsername());
         }
-        // Commit the transaction
-//        transaction.commit();
+
         return users ;
     }
 }

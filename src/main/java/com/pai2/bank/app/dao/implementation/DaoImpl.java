@@ -122,6 +122,28 @@ public abstract class DaoImpl <K, E> implements Dao<K, E> {
     }
 
 
+    @Override
+    public boolean remove(K id) {
+        E entity = this.findById(id);
+        if (entity != null) {
+            try {
+                getEntityManager().getTransaction().begin();
+                getEntityManager().remove(entity);
+                getEntityManager().flush();
+                getEntityManager().clear();
+                getEntityManager().getTransaction().commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+                getEntityManager().getTransaction().rollback();
+
+            }
+            return true;
+        } else {
+            throw new NotFoundException("Can not remove object which doesn't exists");
+        }
+    }
+
+
     protected EntityManager getEntityManager() {
         return entityManager;
     }

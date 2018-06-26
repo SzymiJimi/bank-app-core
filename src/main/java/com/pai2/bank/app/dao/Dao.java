@@ -18,4 +18,6 @@ public interface Dao<K, E> extends Serializable {
 
     public E merge(E entity);
 
+    public boolean remove(K id);
+
 }

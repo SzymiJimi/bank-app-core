@@ -15,7 +15,7 @@ import javax.mail.Transport;
 public class SendEmailService {
 
 
-    public void sendEmail(String receipient, String emailMessage, String subject){
+    public boolean sendEmail(String receipient, String emailMessage, String subject){
 
         String from = "bankapp@prokonto.pl";
         final String username = "bankapp";
@@ -53,9 +53,11 @@ public class SendEmailService {
             Transport.send(message);
 
             System.out.println("Sent message successfully....");
+            return true;
 
         } catch (MessagingException e) {
-            throw new RuntimeException(e);
+            return false;
+
         }
 
     }
