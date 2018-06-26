@@ -1,13 +1,14 @@
 package com.pai2.bank.app.dao.implementation;
 
 import com.pai2.bank.app.dao.BankAccountOfferDao;
-import com.pai2.bank.app.model.Bankaccount;
 import com.pai2.bank.app.model.Bankaccountoffer;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Szymon on 14.06.2018.
@@ -24,11 +25,20 @@ public class BankAccountOfferDaoImpl extends DaoImpl<Integer, Bankaccountoffer> 
     }
 
     @Override
-    public Bankaccountoffer findByIdOffer(Integer idBankAccountOffer) {
+    public List<Bankaccountoffer> findByIdOffer(Integer idBankAccountOffer) {
     Query query = getEntityManager().createNamedQuery("Bankaccountoffer.findByIdBankAccountOffer");
     query.setParameter("idBankAccountOffer", idBankAccountOffer);
     Bankaccountoffer bankaccountoffer = (Bankaccountoffer) query.getSingleResult();
-    return bankaccountoffer;
+    return (List<Bankaccountoffer>) bankaccountoffer;
+    }
+
+    @Override
+    public List<Bankaccountoffer> findOfferByManagerId(Integer managerId) {
+
+        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccountoffer b WHERE b.idManager.idManager="+ managerId);
+        System.out.println("Wyniki pobierania kont: "+query.getResultList());
+        return new ArrayList<Bankaccountoffer>(query.getResultList());
+
     }
 
 }

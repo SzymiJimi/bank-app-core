@@ -126,7 +126,7 @@ public class NewWorkerController {
         LocalDate localDate = LocalDate.now();
         String date = dtf.format(localDate);
         System.out.println("dodawanie clienta");
-       
+
         consultantDAO.persist(consultant);
 
 

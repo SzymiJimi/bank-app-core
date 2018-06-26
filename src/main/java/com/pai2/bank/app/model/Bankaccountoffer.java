@@ -39,7 +39,8 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Bankaccountoffer.findByBankTransferPrice", query = "SELECT b FROM Bankaccountoffer b WHERE b.bankTransferPrice = :bankTransferPrice")
     , @NamedQuery(name = "Bankaccountoffer.findByAccountManagementPrice", query = "SELECT b FROM Bankaccountoffer b WHERE b.accountManagementPrice = :accountManagementPrice")
     , @NamedQuery(name = "Bankaccountoffer.findByCardPrice", query = "SELECT b FROM Bankaccountoffer b WHERE b.cardPrice = :cardPrice")
-    , @NamedQuery(name = "Bankaccountoffer.findByStateOfOffer", query = "SELECT b FROM Bankaccountoffer b WHERE b.stateOfOffer = :stateOfOffer")})
+    , @NamedQuery(name = "Bankaccountoffer.findByStateOfOffer", query = "SELECT b FROM Bankaccountoffer b WHERE b.stateOfOffer = :stateOfOffer")
+    , @NamedQuery(name = "Bankaccountoffer.findByManagerId", query = "SELECT b FROM Bankaccountoffer b WHERE b.idManager =: idManager ")})
 public class Bankaccountoffer implements Serializable {
 
     private static final long serialVersionUID = 1L;

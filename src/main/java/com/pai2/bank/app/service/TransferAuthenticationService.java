@@ -39,6 +39,22 @@ public class TransferAuthenticationService {
         }
             return sb.toString();
         }
+
+    public String  generatePinCode(){
+        StringBuilder sb = new StringBuilder(4);
+        for(int i=0; i<4; i++) {
+            sb.append(NUMBER.charAt(rnd.nextInt(NUMBER.length())));
+        }
+        return sb.toString();
     }
+
+    public String generateCreditCardNumber() {
+        StringBuilder sb = new StringBuilder(16);
+        for(int i=0; i<16; i++) {
+            sb.append(NUMBER.charAt(rnd.nextInt(NUMBER.length())));
+        }
+        return sb.toString();
+    }
+}
 
 
