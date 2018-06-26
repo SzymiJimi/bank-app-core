@@ -33,4 +33,9 @@ public class UserDaoImpl extends DaoImpl<Integer, User> implements UserDAO {
 
 
     }
+
+    @Override
+    public void saveUser(User user) {
+
+    }
 }

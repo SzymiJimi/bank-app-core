@@ -21,4 +21,9 @@ public class ManagerDaoImpl extends DaoImpl<Integer,Manager> implements ManagerD
             return null;
         }
     }
+
+    @Override
+    public void saveManager(Manager manager) {
+
+    }
 }

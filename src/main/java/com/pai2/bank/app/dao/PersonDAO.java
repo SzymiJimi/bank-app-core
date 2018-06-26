@@ -10,7 +10,7 @@ public interface PersonDAO extends Dao<Integer,Person> {
 //    public Set<Person> getPersonList();
     Person findPersonData(Integer userId);
 
-    public void save(Person person);
+//    public Person save(Person person);
 
 
 }

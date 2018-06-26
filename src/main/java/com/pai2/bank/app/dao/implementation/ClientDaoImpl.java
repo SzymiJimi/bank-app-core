@@ -24,4 +24,9 @@ public class ClientDaoImpl extends DaoImpl<Integer,Client> implements ClientDAO 
         }
 
     }
+
+    @Override
+    public void saveClient(Client client) {
+
+    }
 }

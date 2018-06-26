@@ -27,7 +27,6 @@ public class Accounttransfer implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Size(min = 1, max = 26)
     @Column(name = "recipientAccount", length = 26)
     private String recipientAccount;
     @OneToMany(mappedBy = "toAccount")

@@ -23,4 +23,22 @@ public class BankAccountOfferDaoImpl extends DaoImpl<Integer, Bankaccountoffer> 
         entityManager.persist(bankaccountoffer);
     }
     }
+
+    @Override
+    public List<Bankaccountoffer> findByIdOffer(Integer idBankAccountOffer) {
+    Query query = getEntityManager().createNamedQuery("Bankaccountoffer.findByIdBankAccountOffer");
+    query.setParameter("idBankAccountOffer", idBankAccountOffer);
+    Bankaccountoffer bankaccountoffer = (Bankaccountoffer) query.getSingleResult();
+    return (List<Bankaccountoffer>) bankaccountoffer;
+    }
+
+    @Override
+    public List<Bankaccountoffer> findOfferByManagerId(Integer managerId) {
+
+        Query query = getEntityManager().createQuery("SELECT b FROM Bankaccountoffer b WHERE b.idManager.idManager="+ managerId);
+        System.out.println("Wyniki pobierania kont: "+query.getResultList());
+        return new ArrayList<Bankaccountoffer>(query.getResultList());
+
+    }
+
 }

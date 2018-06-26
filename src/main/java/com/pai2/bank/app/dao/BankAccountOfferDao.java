@@ -2,9 +2,6 @@ package com.pai2.bank.app.dao;
 
 import com.pai2.bank.app.model.Bankaccountoffer;
 
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
@@ -14,6 +11,7 @@ import java.util.List;
 public interface BankAccountOfferDao extends Dao<Integer, Bankaccountoffer> {
 
     public void save(Bankaccountoffer bankaccountoffer);
+    List<Bankaccountoffer> findByIdOffer(Integer id);
 
-
+    List<Bankaccountoffer> findOfferByManagerId(Integer managerId);
 }
