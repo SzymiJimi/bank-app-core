@@ -25,7 +25,7 @@ public class TransferService {
     private TransferReceipientService transferReceipientService;
 
 
-    private Bankaccount changeAvaibleFounds(Bankaccount bankaccount, BigDecimal transferAmount){
+    protected Bankaccount changeAvaibleFounds(Bankaccount bankaccount, BigDecimal transferAmount){
        BigDecimal amount =  bankaccount.getAmount();
        amount = amount.subtract(transferAmount);
                bankaccount.setAmount(amount);

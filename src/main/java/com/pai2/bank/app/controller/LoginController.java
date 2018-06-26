@@ -26,13 +26,13 @@ import java.util.stream.Collectors;
 public class LoginController {
 
 
-    @Context private HttpServletRequest request;
+    @Context protected HttpServletRequest request;
 
     @EJB(beanInterface = UserDAO.class, beanName = "UserDaoImpl")
-    private UserDAO userDAO;
+    protected UserDAO userDAO;
 
     @EJB(beanInterface = RememberDao.class, beanName = "RememberDaoImpl")
-    private RememberDao rememberDao;
+    protected RememberDao rememberDao;
 
     @EJB(beanName = "AuthenticationService")
     AuthenticationService authenticationServiceImpl;
@@ -42,7 +42,7 @@ public class LoginController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response checkUserRemember(@CookieParam("uuid") Cookie uuid){
         if(request.getSession(false)==null){
-            
+
             return Response.status(403).build();
 
         }else {
